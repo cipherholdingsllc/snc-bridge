@@ -1,0 +1,58 @@
+# Content signals: allow search + AI grounding; AI training opt-out
+# Content-Signal: search=yes,ai-input=yes,ai-train=no
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# AI answer / retrieval bots — Allow
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# AI training crawlers — block (honors ai-train=no)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+# Pure-scrape bots with no retrieval product — block
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+Sitemap: https://sacramentonotaryco.com/sitemap.xml
